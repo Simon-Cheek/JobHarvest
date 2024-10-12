@@ -1,0 +1,11 @@
+{
+  "name": "jobharvest",
+  "version": "1.0.0",
+  "description": "Helps users grow into their desired career",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Cheek, Sasha Cheek",
+  "license": "MIT"
+}
