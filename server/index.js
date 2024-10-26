@@ -1,5 +1,5 @@
 // requirements
-const ai = require("./ai.js");
+const gemini = require("./gemini.js");
 
 // express setup
 const express = require("express");
@@ -10,7 +10,7 @@ app.use(express.json());
 // root path
 app.get("/", async (req, res) => {
   res.send("Hello, World! Welcome to my Express app!");
-  ai.testAI();
+  gemini.testAI();
 });
 
 // start server
