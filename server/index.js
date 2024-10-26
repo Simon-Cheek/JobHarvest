@@ -1,3 +1,5 @@
+const ai = require("./ai.js");
+
 // Import the express module
 const express = require("express");
 
@@ -11,8 +13,9 @@ const PORT = 3000;
 app.use(express.json());
 
 // Sample route for the root path
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   res.send("Hello, World! Welcome to my Express app!");
+  ai.testAI();
 });
 
 // Start the server
