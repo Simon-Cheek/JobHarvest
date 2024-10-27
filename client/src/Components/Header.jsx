@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { Link } from "react-router-dom";
 
 import logo from "../../public/pumpkin.svg";
 
@@ -12,6 +13,10 @@ const headerCss = css`
   background-color: #fafffa;
   padding: 10px 20px;
   box-shadow: 1px 1px 4px #2f2f2f3f;
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
 `;
 
 const logoCss = css`
@@ -22,7 +27,8 @@ const logoCss = css`
 
 const navLinksCss = css`
   display: flex;
-  gap: 16px;
+  column-gap: 16px;
+  row-gap: 8px;
   font-weight: 500;
 `;
 
@@ -30,6 +36,7 @@ const linkCss = css`
   font-size: 14px;
   color: #2f2f2f;
   display: inline-block;
+  position: relative;
   transition: color, transform 0.25s;
   &:hover {
     color: #585858;
@@ -42,27 +49,52 @@ const brandCss = css`
   font-weight: 600;
 `;
 
+const toggleCss = css`
+  border: 1.6px solid #00000055;
+  &:focus {
+    box-shadow: 2px 1px 4px #2f462f22;
+    border: 2px solid #00000088;
+  }
+`;
+
+const slashCss = css`
+  @media (min-width: 577px) {
+    &::after {
+      color: #2f2f2f;
+      content: "/";
+      position: absolute;
+      font-weight: 100;
+      transform: scale(1.8) translateX(150%);
+    }
+  }
+`;
+
 function Header() {
   return (
-    <Navbar expand="md" css={headerCss}>
-      <Navbar.Brand href="#home" css={logoCss}>
+    <Navbar expand="sm" css={headerCss}>
+      <Navbar.Brand href="/" css={logoCss}>
         <img src={logo} alt="Job Harvest Logo - Pumpkin" width="48" />
         <span css={brandCss}>
           job<span style={{ color: "#057C21" }}>Harvest</span>
         </span>
       </Navbar.Brand>
 
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav" css={toggleCss} />
 
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-        <Nav css={navLinksCss}>
-          <Nav.Link href="#home">
-            <span css={linkCss}>Resume</span>
+        <Nav className="mt-2 mt-sm-0" css={navLinksCss}>
+          <Nav.Link href="/resume">
+            <div css={slashCss}>
+              {/* After Slash effect should not grow upon hover */}
+              <span css={linkCss}>Resume</span>
+            </div>
           </Nav.Link>
-          <Nav.Link href="#interview">
-            <span css={linkCss}>Interview</span>
+          <Nav.Link href="/interview">
+            <div css={slashCss}>
+              <span css={linkCss}>Interview</span>
+            </div>
           </Nav.Link>
-          <Nav.Link href="#careers">
+          <Nav.Link href="/careers">
             <span css={linkCss}>Careers</span>
           </Nav.Link>
         </Nav>
