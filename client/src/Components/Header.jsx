@@ -51,7 +51,7 @@ const brandCss = css`
 const toggleCss = css`
   border: 1.6px solid ${colors.black}55;
   &:focus {
-    box-shadow: 2px 1px 4px #2f462f22;
+    box-shadow: 1px 1px 3px ${colors.green08}44 !important;
     border: 2px solid ${colors.black}88;
   }
 `;
@@ -74,7 +74,7 @@ function Header() {
       <Navbar.Brand href="/" css={logoCss}>
         <img src={logo} alt="Job Harvest Logo - Pumpkin" width="48" />
         <span css={brandCss}>
-          job<span style={{ color: "#057C21" }}>Harvest</span>
+          job<span style={{ color: colors.green06 }}>Harvest</span>
         </span>
       </Navbar.Brand>
 
