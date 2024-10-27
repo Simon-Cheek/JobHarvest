@@ -1,3 +1,4 @@
 body {
   font-family: "Poppins", sans-serif !important;
+  padding-top: 69.141px; /* Offsets the header on top */
 }
