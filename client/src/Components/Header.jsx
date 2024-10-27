@@ -1,18 +1,17 @@
 import { css } from "@emotion/react";
 /** @jsxImportSource @emotion/react */
 import "bootstrap/dist/css/bootstrap.min.css";
-
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
 
 import logo from "../../public/pumpkin.svg";
+import { colors } from "../../colorConfig";
 
 // Styles
 const headerCss = css`
-  background-color: #fafffa;
+  background-color: ${colors.white};
   padding: 10px 20px;
-  box-shadow: 1px 1px 4px #2f2f2f3f;
+  box-shadow: 1px 1px 4px ${colors.black}3f;
   display: flex;
   position: fixed;
   top: 0;
@@ -34,7 +33,7 @@ const navLinksCss = css`
 
 const linkCss = css`
   font-size: 14px;
-  color: #2f2f2f;
+  color: ${colors.black};
   display: inline-block;
   position: relative;
   transition: color, transform 0.25s;
@@ -50,17 +49,17 @@ const brandCss = css`
 `;
 
 const toggleCss = css`
-  border: 1.6px solid #00000055;
+  border: 1.6px solid ${colors.black}55;
   &:focus {
     box-shadow: 2px 1px 4px #2f462f22;
-    border: 2px solid #00000088;
+    border: 2px solid ${colors.black}88;
   }
 `;
 
 const slashCss = css`
   @media (min-width: 577px) {
     &::after {
-      color: #2f2f2f;
+      color: ${colors.black};
       content: "/";
       position: absolute;
       font-weight: 100;
