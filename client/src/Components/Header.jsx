@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 
-import logo from "../../public/pumpkin.svg";
+import logo from "../../Assets/pumpkin.svg";
 import { colors } from "../../colorConfig";
 
 // Styles

@@ -9,6 +9,7 @@ function Paragraph({
   underline = false,
   color = colors.black,
   children,
+  ...props
 }) {
   let fontSize = "16px";
   let textMargin = "0";
@@ -58,7 +59,11 @@ function Paragraph({
     text-decoration: ${underline ? "underline" : "none"};
   `;
 
-  return <p css={textCss}>{children}</p>;
+  return (
+    <p css={textCss} {...props}>
+      {children}
+    </p>
+  );
 }
 
 export default Paragraph;
