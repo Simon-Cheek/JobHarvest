@@ -53,7 +53,7 @@ function HeroVisual() {
 
 function HomeHero() {
   const heroCss = css`
-    min-height: 550px;
+    min-height: 600px;
     background-color: ${colors.white};
     display: flex;
     align-items: center;

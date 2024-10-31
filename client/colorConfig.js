@@ -1,8 +1,8 @@
 export const colors = {
   // Colors go from their Lightest Variants to their Darkest
 
-  green00: "#D6FCD1",
-  green01: "#AAEBA9",
+  green00: "#DEF6DD",
+  green01: "#B8F3B4",
   green02: "#8EE292",
   green03: "#70D07D",
   green04: "#48BB61",
