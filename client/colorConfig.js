@@ -12,6 +12,6 @@ export const colors = {
   green08: "#094709",
   green09: "#012F08",
 
-  white: "#fafffa",
+  white: "#fafdfa",
   black: "#282828",
 };
